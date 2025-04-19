@@ -42,58 +42,6 @@ Before proceeding, ensure your system meets the following requirements:
 - ✅ Administrator/root access
 - ✅ Stable internet connection
 
----
-
-## ⚙️ Installation Guide
-
-### 1️⃣ Install Docker
-
-**Windows/macOS:**
-
-- Download Docker Desktop from [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
-- Follow the installation wizard
-- Enable **Kubernetes** in Docker Desktop settings
-
-<p align="center">  
-  <img src="i11.png" width="500" >  
-</p>  
-
-```bash
-docker --version
-```
-
----
-
-### 2️⃣ Install Minikube
-
-Official guide: [Minikube Installation](https://minikube.sigs.k8s.io/docs/start/)
-
-#### For Linux:
-```bash
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-sudo install minikube-linux-amd64 /usr/local/bin/minikube
-```
-
-#### Start Minikube:
-```bash
-minikube start
-```
-
----
-
-### 3️⃣ Install kubectl
-
-Official guide: [kubectl Installation](https://kubernetes.io/docs/tasks/tools/)
-
-#### For Linux:
-```bash
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-chmod +x kubectl
-sudo mv kubectl /usr/local/bin/
-kubectl version --client
-```
-
----
 
 ## 🧪 Local Deployment
 
@@ -282,16 +230,3 @@ Then deploy the `build/` folder to:
 
 ---
 
-## ✅ Final Result
-
-Your React app should now be running locally on Kubernetes using Minikube and is ready to be deployed globally!
-
-<p align="center">
-  <img src="i8.png" width="700" alt="Deployment Screenshot">
-</p>
-<p align="center">
-  <img src="i9.png" width="700" alt="Deployment Screenshot">
-</p>
-<p align="center">
-  <img src="i10.png" width="700" alt="Deployment Screenshot">
-</p>
